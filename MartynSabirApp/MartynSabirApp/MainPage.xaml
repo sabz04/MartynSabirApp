@@ -1,0 +1,52 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MartynSabirApp.MainPage">
+    <ScrollView Orientation="Both">
+    <RelativeLayout>
+        
+            <StackLayout>
+                <Label>Первое число:</Label>
+                <Entry x:Name="firstTextBox"></Entry>
+
+                <Label>Второе число:</Label>
+                <Entry x:Name="secondTextBox"></Entry>
+                <FlexLayout Direction="Column">
+                    <Button Clicked="Button_Clicked" Text="Умножить"></Button>
+                    <Button Clicked="Button_Clicked" Text="Плюс"></Button>
+                    <Button Clicked="Button_Clicked" Text="Минус"></Button>
+                    <Button Clicked="Button_Clicked" Text="Делить"></Button>
+                </FlexLayout>
+                <StackLayout Orientation="Horizontal">
+                    <Label Text="Результат: " FontSize="24"></Label>
+                    <Label x:Name="resultLabel" FontSize="24"></Label>
+                </StackLayout>
+                
+                <Grid>
+                    <Grid.RowDefinitions>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                        <RowDefinition/>
+                    </Grid.RowDefinitions>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition/>
+                        <ColumnDefinition/>
+                    </Grid.ColumnDefinitions>
+                    <Label
+                    BackgroundColor="Red"
+                    Grid.Row="1" Grid.Column="1">Стр:1.Кол:1</Label>
+                    <Label 
+                    BackgroundColor="Green"
+                    Grid.Row="2" Grid.Column="0">Стр:2.Кол:0</Label>
+                </Grid>
+                <AbsoluteLayout>
+                    <Label Text="Максим" AbsoluteLayout.LayoutBounds="300, 50,200, 50"></Label>
+                    <Label Text="Зульфат" AbsoluteLayout.LayoutBounds="50, 400, 300, 50"></Label>
+                </AbsoluteLayout>
+            </StackLayout>
+        
+        
+        
+    </RelativeLayout>
+    </ScrollView>
+</ContentPage>
